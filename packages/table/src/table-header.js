@@ -382,9 +382,9 @@ export default {
         document.ondragstart = function() { return false; };
 
         const handleMouseMove = (event) => {
+          debugger;
           const deltaLeft = event.clientX - this.dragState.startMouseLeft;
           const proxyLeft = this.dragState.startLeft + deltaLeft;
-
           resizeProxy.style.left = Math.max(minLeft, proxyLeft) + 'px';
         };
 
